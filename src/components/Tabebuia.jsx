@@ -33,13 +33,16 @@ export default function Tabebuia({
   const readyRef = useRef(false);
   const pendingStageRef = useRef(stage);
 
-  const { rive, RiveComponent } = useRive({
-    src,
-    artboard,
-    stateMachines: stateMachine,
-    autoplay: true,
-    autoBind: false,
-  });
+  const { rive, RiveComponent } = useRive(
+    {
+      src,
+      artboard,
+      stateMachines: stateMachine,
+      autoplay: true,
+      autoBind: false,
+    },
+    { useDevicePixelRatio: true },
+  );
 
   const bindStage = useCallback((stageName) => {
     if (!riveRef.current || !vmRef.current) return;
@@ -66,6 +69,7 @@ export default function Tabebuia({
     vmRef.current = vm;
     readyRef.current = true;
 
+    rive.resizeDrawingSurfaceToCanvas();
     bindStage(pendingStageRef.current);
   }, [rive, viewModel, bindStage]);
 

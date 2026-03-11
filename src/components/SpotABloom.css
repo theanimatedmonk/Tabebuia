@@ -24,7 +24,7 @@
   border-radius: 14px;
   overflow: hidden;
   margin-bottom: 20px;
-  background: linear-gradient(20deg, #E4EEFF -5%, rgba(227, 255, 223, 0.00) 84.42%);
+  background: linear-gradient(20deg, #E4EEFF -5%, rgba(227, 255, 223, 0.20) 84.42%);
 }
 
 .bloom-question {
