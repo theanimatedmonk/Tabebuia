@@ -1,0 +1,341 @@
+/* ── Page layout ── */
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* ── Hero ── */
+
+.hero {
+  text-align: center;
+  padding: 72px 0 48px;
+}
+
+.hero-tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: #8a7e72;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 440px;
+  margin: 0 auto 28px;
+}
+
+.hero-install {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a1a1a;
+  color: #e0dcd7;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+}
+
+.hero-install code {
+  user-select: all;
+}
+
+/* ── Sections ── */
+
+.section {
+  padding: 48px 0;
+}
+
+.section + .section {
+  border-top: 1px solid #e8e3dc;
+}
+
+.section-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.section-sub {
+  text-align: center;
+  color: #777;
+  font-size: 0.95rem;
+  margin: 0 0 32px;
+}
+
+/* ── Demo area ── */
+
+.demo-area {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Steps ── */
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 32px;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.step h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 4px;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.step > div {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Code blocks ── */
+
+.code-block {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 16px 18px;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  margin: 0;
+}
+
+.code-block code {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: #e0dcd7;
+  white-space: pre;
+}
+
+.code-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8a7e72;
+  margin-bottom: 8px;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #aaa;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ddd;
+}
+
+/* ── Stage demo ── */
+
+.stage-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.stage-canvas {
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(20deg, #E4EEFF -5%, rgba(227, 255, 223, 0.00) 84.42%);
+}
+
+.stage-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.stage-pill {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1px solid #ddd8d0;
+  background: #faf8f5;
+  font-size: 0.82rem;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+}
+
+.stage-pill:hover {
+  border-color: #c5bfb5;
+  background: #f0ebe4;
+}
+
+.stage-pill.active {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+/* ── Tables ── */
+
+.table-heading {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 32px 0 12px;
+}
+
+.table-heading:first-of-type {
+  margin-top: 24px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e8e3dc;
+}
+
+.table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.table-wrap th {
+  text-align: left;
+  padding: 10px 14px;
+  background: #f5f1eb;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e8e3dc;
+}
+
+.table-wrap td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f0ebe4;
+  color: #333;
+  vertical-align: top;
+}
+
+.table-wrap tr:last-child td {
+  border-bottom: none;
+}
+
+.table-wrap code {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 0.8rem;
+  background: #f5f1eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #8a5a3a;
+}
+
+/* ── Stage tags ── */
+
+.stage-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.stage-tag {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 0.82rem;
+  background: #f5f1eb;
+  color: #8a5a3a;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid #e8e3dc;
+}
+
+/* ── Footer ── */
+
+.footer {
+  text-align: center;
+  padding: 48px 0 24px;
+  border-top: 1px solid #e8e3dc;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 520px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-install {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+  }
+
+  .step {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .table-wrap {
+    font-size: 0.8rem;
+  }
+}

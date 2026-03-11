@@ -1,0 +1,81 @@
+.bloom-card {
+  width: 412px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 24px 28px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bloom-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.bloom-image-area {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: linear-gradient(20deg, #E4EEFF -5%, rgba(227, 255, 223, 0.00) 84.42%);
+}
+
+.bloom-question {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.bloom-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bloom-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px 10px;
+  border-radius: 12px;
+  border: 1px solid #ece8e3;
+  background: #faf8f5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 68px;
+}
+
+.bloom-option:hover {
+  border-color: #d4cfc8;
+  background: #f4f0eb;
+}
+
+.bloom-option.selected {
+  border-color: #b8a990;
+  background: #f0ebe4;
+  box-shadow: 0 0 0 2px rgba(184, 169, 144, 0.25);
+}
+
+.bloom-option-emoji {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.bloom-option-label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.72rem;
+  color: #4a4a4a;
+  white-space: nowrap;
+}
