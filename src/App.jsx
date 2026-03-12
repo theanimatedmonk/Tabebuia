@@ -5,11 +5,13 @@ import "./App.css";
 const installCmd = `npm i tabebuia @rive-app/react-webgl2`;
 
 const coreExample = `import { Tabebuia } from "tabebuia"
+import "tabebuia/dist-lib/tabebuia.css"
 
 <Tabebuia stage="peak" />
 <Tabebuia stage="fading" width={300} />`;
 
 const cardExample = `import { SpotABloom } from "tabebuia"
+import "tabebuia/dist-lib/tabebuia.css"
 
 <SpotABloom />
 <SpotABloom
@@ -140,7 +142,7 @@ function App() {
               <tr><td><code>stage</code></td><td>string</td><td><code>"budding"</code></td><td>Bloom stage to display</td></tr>
               <tr><td><code>width</code></td><td>number</td><td><code>400</code></td><td>Width in px</td></tr>
               <tr><td><code>height</code></td><td>number</td><td><code>width &times; 0.625</code></td><td>Height in px</td></tr>
-              <tr><td><code>src</code></td><td>string</td><td><code>"/tabebuia_rosea.riv"</code></td><td>Path to .riv file</td></tr>
+              <tr><td><code>src</code></td><td>string</td><td>bundled</td><td>Custom .riv file path (bundled by default)</td></tr>
               <tr><td><code>className</code></td><td>string</td><td>&mdash;</td><td>Additional CSS class</td></tr>
               <tr><td><code>style</code></td><td>object</td><td>&mdash;</td><td>Inline styles</td></tr>
             </tbody>

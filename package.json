@@ -1,21 +1,54 @@
 {
   "name": "tabebuia",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "A Rive-powered bloom-stage animation component for React. One prop. Zero config.",
+  "main": "dist-lib/tabebuia.cjs.js",
+  "module": "dist-lib/tabebuia.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist-lib/tabebuia.es.js",
+      "require": "./dist-lib/tabebuia.cjs.js"
+    },
+    "./style.css": "./dist-lib/tabebuia.css",
+    "./dist-lib/tabebuia.css": "./dist-lib/tabebuia.css"
+  },
+  "files": [
+    "dist-lib/tabebuia.es.js",
+    "dist-lib/tabebuia.cjs.js",
+    "dist-lib/tabebuia.css"
+  ],
+  "keywords": [
+    "rive",
+    "react",
+    "animation",
+    "bloom",
+    "tabebuia",
+    "component"
+  ],
+  "author": "theanimatedmonk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theanimatedmonk/Tabebuia.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:lib": "vite build --config vite.config.lib.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build:lib"
   },
-  "dependencies": {
-    "@rive-app/react-webgl2": "^4.27.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@rive-app/react-webgl2": ">=4"
   },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@rive-app/react-webgl2": "^4.27.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
@@ -23,6 +56,8 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "vite": "^7.3.1"
   }
 }

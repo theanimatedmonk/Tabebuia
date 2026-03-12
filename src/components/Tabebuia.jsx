@@ -1,6 +1,8 @@
 import { useEffect, useRef, useCallback } from "react";
 import { useRive } from "@rive-app/react-webgl2";
 
+const defaultRivSrc = new URL("./assets/tabebuia_rosea.riv", import.meta.url).href;
+
 const STAGES = ["budding", "partial", "peak", "full-glory", "fading"];
 
 /**
@@ -10,7 +12,7 @@ const STAGES = ["budding", "partial", "peak", "full-glory", "fading"];
  * @param {"budding"|"partial"|"peak"|"full-glory"|"fading"} props.stage - Bloom stage to display
  * @param {number}  [props.width=400]  - Width in pixels
  * @param {number}  [props.height]     - Height in pixels (defaults to width × 0.625)
- * @param {string}  [props.src="/tabebuia_rosea.riv"] - Path to .riv file
+ * @param {string}  [props.src] - Path to .riv file (bundled by default)
  * @param {string}  [props.artboard="Tabebuia"]       - Artboard name in the .riv file
  * @param {string}  [props.stateMachine="Tabebuia"]    - State machine name
  * @param {string}  [props.viewModel="Tabebuia"]       - ViewModel name
@@ -21,7 +23,7 @@ export default function Tabebuia({
   stage = "budding",
   width = 400,
   height,
-  src = "/tabebuia_rosea.riv",
+  src = defaultRivSrc,
   artboard = "Tabebuia",
   stateMachine = "Tabebuia",
   viewModel = "Tabebuia",
